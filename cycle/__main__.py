@@ -1,11 +1,11 @@
 import constants
 
 from game.casting.cast import Cast
-from game.casting.food import Food
 from game.casting.score import Score
 from game.casting.cycle import Cycle
 from game.scripting.script import Script
 from game.scripting.control_actors_action import ControlActorsAction
+from game.scripting.control_actors_action_player2 import ControlActorsAction2
 from game.scripting.move_actors_action import MoveActorsAction
 from game.scripting.handle_collisions_action import HandleCollisionsAction
 from game.scripting.draw_actors_action import DrawActorsAction
@@ -20,8 +20,8 @@ def main():
     
     # create the cast
     cast = Cast()
-    cast.add_actor("foods", Food())
-    cast.add_actor("cycles", Cycle())
+    cast.add_actor("cycles1", Cycle())
+    cast.add_actor("cycles2", Cycle())
     cast.add_actor("scores", Score())
    
     # start the game
