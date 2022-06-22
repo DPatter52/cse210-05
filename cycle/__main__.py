@@ -1,5 +1,6 @@
 import constants
 
+from game.casting.actor import Actor
 from game.casting.cast import Cast
 from game.casting.score import Score
 from game.casting.cycle import Cycle
@@ -20,10 +21,12 @@ def main():
     
     # create the cast
     cast = Cast()
+
     cast.add_actor("cycles1", Cycle())
     cast.add_actor("cycles2", Cycle())
     cast.add_actor("scores", Score())
-   
+
+
     # start the game
     keyboard_service = KeyboardService()
     video_service = VideoService()
