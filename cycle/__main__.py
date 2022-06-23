@@ -26,6 +26,9 @@ def main():
     cast.add_actor("cycles2", Cycle())
     cast.add_actor("scores", Score())
 
+    cycle1 = cast.get_first_actor("cycles1")
+    
+
 
     # start the game
     keyboard_service = KeyboardService()
