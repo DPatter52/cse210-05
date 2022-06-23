@@ -1,4 +1,5 @@
 import constants
+import time
 from game.casting.actor import Actor
 from game.scripting.action import Action
 from game.shared.point import Point
@@ -29,6 +30,7 @@ class HandleCollisionsAction(Action):
             self._handle_segment_collision(cast)
             self._handle_cycle_collision(cast)
             self._handle_game_over(cast)
+           
 
 
 
@@ -75,6 +77,8 @@ class HandleCollisionsAction(Action):
         for segment in segments2:
             if head2.get_position().equals(segment.get_position()):
                 self._is_game_over = True
+
+
         
     def _handle_game_over(self, cast):
         """Shows the 'game over' message and turns the cycles white if the game is over.
